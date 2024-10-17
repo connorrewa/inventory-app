@@ -4,18 +4,20 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Add New Category</title>
+        <link rel="stylesheet" href="/css/form.css" />
+        <link rel="stylesheet" href="/css/globals.css" />
     </head>
     <body>
         <h1>Add New Category</h1>
         <form action="/categories/create" method="POST">
             <label for="name">Category Name:</label>
             <input type="text" id="name" name="name" required />
-            <br />
+
             <label for="description">Description:</label>
             <textarea id="description" name="description" required></textarea>
-            <br />
+
             <button type="submit">Add Category</button>
         </form>
-        <a href="/categories">Back to Categories</a>
+        <a class="back-link" href="/categories">Back to Categories</a>
     </body>
 </html>

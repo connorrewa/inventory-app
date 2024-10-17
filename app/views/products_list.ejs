@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Fridge Management</title>
+        <link rel="stylesheet" href="/css/globals.css" />
     </head>
     <body>
         <%- include('./partials/navbar') %>
@@ -19,19 +20,21 @@
                 <strong>Date Added:</strong> <%= new
                 Date(product.date_added).toLocaleDateString() %>
 
-                <!-- Update button -->
-                <a href="/<%= product.id %>/update">
-                    <button type="button">Update</button>
-                </a>
+                <div class="buttons">
+                    <!-- Update button -->
+                    <a href="/<%= product.id %>/update">
+                        <button type="button" class="update">Update</button>
+                    </a>
 
-                <!-- Delete button -->
-                <form
-                    action="/<%= product.id %>/delete"
-                    method="POST"
-                    style="display: inline"
-                >
-                    <button type="submit">Delete</button>
-                </form>
+                    <!-- Delete button -->
+                    <form
+                        action="/<%= product.id %>/delete"
+                        method="POST"
+                        style="display: inline"
+                    >
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+                </div>
             </li>
             <% }) %>
         </ul>
