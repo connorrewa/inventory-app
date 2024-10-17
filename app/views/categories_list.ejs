@@ -16,17 +16,21 @@
                 <strong>Name:</strong> <%= category.name %> -
                 <strong>Description:</strong> <%= category.description %>
 
-                <!-- Delete button -->
-                <form
-                    action="/categories/<%= category.id %>/delete"
-                    method="POST"
-                    style="display: inline"
-                >
-                    <button type="submit">Delete</button>
-                </form>
+                <div class="buttons">
+                    <!-- Delete button -->
+                    <form
+                        action="/categories/<%= category.id %>/delete"
+                        method="POST"
+                        style="display: inline"
+                    >
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
             </li>
             <% }) %>
         </ul>
-        <a href="/categories/create">Add New Category</a>
+        <a href="/categories/create"
+            ><button class="add-new">Add New Category</button></a
+        >
     </body>
 </html>

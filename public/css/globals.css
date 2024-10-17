@@ -85,8 +85,44 @@ a.back-link:hover {
     text-decoration: underline;
 }
 
+.add-new,
+.delete-btn,
+.update {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.add-new {
+    background-color: #4caf50; /* Green */
+}
+
+.add-new:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.delete-btn {
+    background-color: #f44336; /* Red */
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f; /* Darker red */
+}
+
+.update {
+    background-color: rgb(21, 107, 9); /* Dark Green */
+}
+
+.update:hover {
+    background-color: rgb(17, 85, 8); /* Darker green */
+}
+
 .buttons {
-    display: inline;
-    display: flex;
-    justify-content: flex-end;
+    display: flex; /* Align buttons */
+    justify-content: flex-end; /* Right align buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Top margin for spacing */
 }
