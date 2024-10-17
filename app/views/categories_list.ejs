@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Category Management</title>
+    </head>
+    <body>
+        <%- include('./partials/navbar') %>
+        <h1>Categories</h1>
+        <ul>
+            <% categories.forEach(category => { %>
+            <li>
+                <strong>Name:</strong> <%= category.name %> -
+                <strong>Description:</strong> <%= category.description %>
+
+                <!-- Delete button -->
+                <form
+                    action="/categories/<%= category.id %>/delete"
+                    method="POST"
+                    style="display: inline"
+                >
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+            <% }) %>
+        </ul>
+        <a href="/categories/create">Add New Category</a>
+    </body>
+</html>

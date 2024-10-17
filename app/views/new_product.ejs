@@ -22,11 +22,9 @@
             <br />
             <label for="category_id">Category:</label>
             <select id="category_id" name="category_id" required>
-                <!-- The options here should be dynamically generated from your categories in the database -->
-                <option value="1">Dairy</option>
-                <option value="2">Beverages</option>
-                <option value="3">Produce</option>
-                <option value="4">Bakery</option>
+                <% categories.forEach(category => { %>
+                <option value="<%= category.id %>"><%= category.name %></option>
+                <% }) %>
             </select>
             <br />
             <button type="submit">Add Product</button>

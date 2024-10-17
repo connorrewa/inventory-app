@@ -28,9 +28,6 @@ app.use((err, req, res, next) => {
             title: 'Error Occurred',
             errorMessage: err.message,
         });
-    resstatus(404).render('404', {
-        message: 'page not found',
-    });
 });
 
 app.listen(port, () => {
